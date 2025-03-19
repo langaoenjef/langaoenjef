@@ -114,5 +114,8 @@ flowchart TD
   BS --> BT["(After a moment, you cautiously peek out.)"]
   BT --> BU["(Thais is gone. Only the mirror remains where she once stood.)"]
 
-  BU --> BV["(You hesitate... but then flip the mirro
+  BU --> BV["(You hesitate... but then flip the mirror over.)"]
+  BV --> BW["(There's something written on the back: 'Made by Re-Logic'.)"]
+  BW --> BX["Player: '...Huh.' (You pocket the mirror and walk away.)"]
+  BX --> BY[QUEST COMPLETE]
 ```
