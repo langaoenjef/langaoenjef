@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
   0[Quest Dialogue Tree >>]
 
@@ -115,3 +116,4 @@ flowchart TD
   BR --> BS["(There's something written on the back: 'Made by Re-Logic'.)"]
   BS --> BT["Player: '...Huh.' (You pocket the mirror and walk away.)"]
   BT --> BU[QUEST COMPLETE]
+```
