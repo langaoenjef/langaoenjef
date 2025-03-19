@@ -23,7 +23,8 @@ flowchart TD
   N --> O["Thais: 'But alas, you are *tragically* mistaken. Very well, bring me a mirror, and we shall settle this once and for all!'"]
   O --> P["Thais: 'Prepare to witness your own defeat… in dazzling reflection!'"]
   
-  P --> Q["QUEST ACCEPTED"]
+  J --> Q["QUEST ACCEPTED"]
+  O --> Q
 
   %% --- ASKING ABOUT THE MIRROR --- %%
   Q --> R["(There's a lingering question inside your mind.)"]
@@ -40,82 +41,80 @@ flowchart TD
   Z --> AA["(She dramatically faints. You walk away while she recovers.)"]
   AA --> X
 
-  %% --- ASKING ABOUT HER CURSE (FIRST) --- %%
+  %% --- ASKING ABOUT HER CURSE --- %%
   R --> AB["Player: 'How did you even end up like this?'"]
+  R --> AC["Player: 'Wait… is the wizard still around?'"]
 
-  AB --> AC["Thais: 'Ah, an inquisitive mind! A rare trait in one so... rugged.'"]
-  AC --> AD["Thais: 'You see, I once lavished praise upon a wizard’s mustache.'"]
-  AD --> AE["Thais: 'A mustache so grand, so powerful, so exquisitely groomed!'"]
-  AE --> AF["Thais: 'But alas! I praised it *one* too many times… and he cursed me for it.'"]
-  AF --> AG["Thais: 'Now, my magnificence is hidden beneath this *vile, wretched, unspeakable* filth!'"]
-  AG --> AH["Thais: 'So tragic… So cruel… So—'"]
-  AH --> AI["Player: '...Yeah, I think I get it.'"]
-  AI --> AJ["(After hearing the story, a new question lingers in your mind.)"]
+  AB --> AD["Thais: 'Ah, an inquisitive mind! A rare trait in one so... rugged.'"]
+  AD --> AE["Thais: 'You see, I once lavished praise upon a wizard’s mustache.'"]
+  AE --> AF["Thais: 'A mustache so grand, so powerful, so exquisitely groomed!'"]
+  AF --> AG["Thais: 'But alas! I praised it *one* too many times… and he cursed me for it.'"]
+  AG --> AH["Thais: 'Now, my magnificence is hidden beneath this *vile, wretched, unspeakable* filth!'"]
+  AH --> AI["Thais: 'So tragic… So cruel… So—'"]
+  AI --> AJ["Player: '...Yeah, I think I get it.'"]
+  AJ --> X
 
-  %% --- ASKING ABOUT THE WIZARD (NOW UNLOCKED) --- %%
-  AJ --> AK["Player: 'Wait… is the wizard still around?'"]
-
-  AK --> AL["Thais: 'H-Haha! Oh, don’t worry about that!'"]
-  AL --> AM["Thais: 'It’s not like he’d hold a grudge for *centuries* or anything… right? Haha… right?'"]
-  AM --> X
+  AC --> AK["Thais: 'H-Haha! Oh, don’t worry about that!'"]
+  AK --> AL["Thais: 'It’s not like he’d hold a grudge for *centuries* or anything… right? Haha… right?'"]
+  AL --> AJ
 
   %% --- RETURNING TO THAIS --- %%
-  X --> AN["Speak to Thais again"]
-  AN --> AO["Without the mirror"]
-  AN --> AP["With the mirror in hand"]
+  X --> AM["Speak to Thais again"]
+  AM --> AN["Without the mirror"]
+  AM --> AO["With the mirror in hand"]
 
   %% --- WITHOUT THE MIRROR --- %%
-  AO --> AQ["Thais: 'Ah, you return! With a mirror, I presume?'"]
-  AQ --> AR["Player: 'Not yet.'"]
-  AQ --> AS["Player: 'These things take time, Princess Mudpile.'"]
+  AN --> AP["Thais: 'Ah, you return! With a mirror, I presume?'"]
+  AP --> AQ["Player: 'Not yet.'"]
+  AP --> AR["Player: 'These things take time, Princess Mudpile.'"]
 
-  AR --> AT["Thais: 'Tragic. Devastating. A true betrayal of beauty itself.'"]
-  AS --> AU["Thais: (GASPS) 'HOW DARE YOU?!'"]
-  AT --> AV["Thais: 'Do not tarry too long, hero! Every moment without my reflection is agony!'"]
-  AU --> AV
+  AQ --> AS["Thais: 'Tragic. Devastating. A true betrayal of beauty itself.'"]
+  AR --> AT["Thais: (GASPS) 'HOW DARE YOU?!'"]
+  AS --> AU["Thais: 'Do not tarry too long, hero! Every moment without my reflection is agony!'"]
+  AT --> AU
 
-  AV --> X
+  AU --> X
 
   %% --- WITH THE MIRROR --- %%
-  AP --> AW["Thais: 'At last! The instrument of my redemption!'"]
-  AW --> AX["Thais: 'Quickly, hand it over! I must gaze upon my own splendor!'"]
-  AX --> AY["(She snatches the mirror and dramatically holds it up to her face.)"]
+  AO --> AV["Thais: 'At last! The instrument of my redemption!'"]
+  AV --> AW["Thais: 'Quickly, hand it over! I must gaze upon my own splendor!'"]
+  AW --> AX["(She snatches the mirror and dramatically holds it up to her face.)"]
 
   %% --- REACTION TO HER REFLECTION --- %%
-  AY --> AZ["Thais: (Gasp) 'Oh no… I’m beautiful!'"]
-  AZ --> BA["Thais: 'This whole time I thought I was doomed to be hideous!'"]
-  BA --> BB["Thais: 'I was just covered in mud!'"]
-  BB --> BC["Thais: (Sniffles) 'It was so tragic. But also inspiring. The courage I showed… the resilience…'"]
-  BC --> BD["Thais: 'I truly am a marvel!'"]
+  AX --> AY["Thais: (Gasp) 'Oh no… I’m beautiful!'"]
+  AY --> AZ["Thais: 'This whole time I thought I was doomed to be hideous!'"]
+  AZ --> BA["Thais: 'I was just covered in mud!'"]
+  BA --> BB["Thais: (Sniffles) 'It was so tragic. But also inspiring. The courage I showed… the resilience…'"]
+  BB --> BC["Thais: 'I truly am a marvel!'"]
 
-  BD --> BE["Player: 'I mean… yeah, I could’ve told you that.'"]
-  BD --> BF["Player: 'So, what now? Do you start a religion?'"]
+  BC --> BD["Player: 'I mean… yeah, I could’ve told you that.'"]
+  BC --> BE["Player: 'So, what now? Do you start a religion?'"]
 
-  BF --> BG["Thais: 'Hmm… The Church of Thais does have a *divine* ring to it.'"]
-  BG --> BH["Thais: 'But enough about that—your reward!'"]
-  BE --> BH
+  BE --> BF["Thais: 'Hmm… The Church of Thais does have a *divine* ring to it.'"]
+  BF --> BG["Thais: 'But enough about that—your reward!'"]
+  BD --> BG
 
   %% --- THE REWARD (SORT OF) --- %%
-  BH --> BI["Thais: 'As a reward, I grant you something far more valuable than gold—'"]
-  BI --> BJ["Thais: 'My sincerest flattery.'"]
+  BG --> BH["Thais: 'As a reward, I grant you something far more valuable than gold—'"]
+  BH --> BI["Thais: 'My sincerest flattery.'"]
 
-  BJ --> BK["Player: '...That's it? No actual reward?'"]
-  BK --> BL["Thais: 'Oh, darling, words from lips as divine as mine are worth more than any treasure.'"]
-  BL --> BM["(She tosses her hair dramatically—right as the mirror emits a dazzling light.)"]
-  BM --> BN["(In a sudden flash, she vanishes, leaving the mirror behind.)"]
+  BI --> BJ["Player: '...That's it? No actual reward?'"]
+  BJ --> BK["Thais: 'Oh, darling, words from lips as divine as mine are worth more than any treasure.'"]
+  BK --> BL["(She tosses her hair dramatically—right as the mirror emits a dazzling light.)"]
+  BL --> BM["(In a sudden flash, she vanishes, leaving the mirror behind.)"]
 
   %% --- FINAL PLAYER REACTION --- %%
-  BN --> BO["Player: 'Wait—what’s happening?!'"]
-  BO --> BP["(You are left alone. Only the mirror remains where she once stood.)"]
+  BM --> BN["Player: 'Wait—what’s happening?!'"]
+  BM --> BO["Player: 'OH GOD IT’S A BOMB!'"]
 
-  BP --> BQ["Player: 'OH GOD IT’S A BOMB!'"]
-  BQ --> BR["(You dive for cover.)"]
-  BR --> BS["(…Silence.)"]
-  BS --> BT["(After a moment, you cautiously peek out.)"]
-  BT --> BU["(Thais is gone. Only the mirror remains where she once stood.)"]
+  BO --> BP["(Player dives for cover—unnecessarily.)"]
+  BN --> BQ["(Thais panics too—then *poofs*.)"]
 
-  BU --> BV["(You hesitate... but then flip the mirror over.)"]
-  BV --> BW["(There's something written on the back: 'Made by Re-Logic'.)"]
-  BW --> BX["Player: '...Huh.' (You pocket the mirror and walk away.)"]
-  BX --> BY[QUEST COMPLETE]
+  BP --> BR["(You hesitate... but then flip the mirror over.)"]
+  BQ --> BR
+
+  BR --> BS["(There's something written on the back: 'Made by Re-Logic'.)"]
+  BS --> BT["Player: '...Huh.' (You pocket the mirror and walk away.)"]
+  BT --> BU[QUEST COMPLETE]
+
 ```
